@@ -16,12 +16,12 @@ h1 {
 }
 
 #intro, #books, #travel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 50px;
     margin-left: 20%;
     margin-right: 20%;
-    display: flexbox;
-    justify-content: center;
-    align-items: center;
 }
 
 #input1, #input2 {
@@ -29,14 +29,13 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 5vh;
-    margin-left: 750px;
-    padding-left: 150;
+    box-sizing: border-box;
+    margin: 0 10px;
     text-align: center;
 }
 
 #calculation {
-    margin-left: 800px;
+    margin-left: 20%;
 }
 
 #result {
