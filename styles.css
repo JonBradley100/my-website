@@ -25,8 +25,8 @@ h1 {
 }
 
 #input1, #input2 {
-    display: flexbox;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 5vh;
