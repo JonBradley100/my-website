@@ -1,104 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv=""X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonathan Bradley</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <script src="https://ajax.gooleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <title>Jonathan Bradley Website</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
 
-    <body>        
+<body>  
 
-        <nav class="navbar-inverse" style="position:sticky;top:0;z-index:99999">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle dropdown-btn" data-toggle="collapse" role="navigation" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Jonathan Bradley</a>
-            </div>
+  <nav id="navbar" class="navbar">
+    <ul>
+        <li>
+          <a href="" class="home">Home</a>
+        </li>
+        <div class="nav-toggle">
+          <li>
+            <a href="">Holiday Photos</a>
+          </li>
+          <li>
+            <a href="">Calculation</a>
+          </li>
+          <li>
+            <a href="">Places</a>
+          </li>
+          <li>
+            <a href="">Tennis</a>
+          </li>
+          <li>
+            <a href="">Contact Details</a>
+          </li>
+        </div>
+    </ul>
 
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="#intro">Intro</a></li>
-                    <li><a href="#calculation">Calculation</a></li>
-                    <li><a href="#books">Books</a></li>
-                    <li><a href="#travel">Travel</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropbtn">Dropdown</a>
-                        <div class="dropdown-content">
-                            <a href="#intro">Intro</a>
-                            <a href="#calculation">Calculation</a>
-                            <a href="#books">Books</a>
-                            <a href="#travel">Travel</a>
-                            <a href="#contact">Contact</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <button id="hamburger-toggle" class="hamburger">
+      <div class="icon-open">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M4 6l16 0" />
+          <path d="M4 12l16 0" />
+          <path d="M4 18l16 0" />
+        </svg>
+      </div>
+      
+      <div class="icon-close">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M18 6l-12 12" />
+          <path d="M6 6l12 12" />
+        </svg>
+      </div>
+    </button>
+  
+  </nav>
 
-        <section id="intro">
-            <h1>Welcome to my Website</h1>
-            <br>
-            <p>Hi - My name is Jonathan Bradley and I work as a chemical engineer for Goodwin International, responsible for the sizing and specification of checking valves and axial control valves.<br>
-               I come from Sherburn-in-Elmet, which is a village in Yorkshire near Leeds, but today I live in the city of Stoke-on-Trent in Staffordshire <br><br>
-               I have played tennis for many years and currently play in the local leagues for Florence and Stone tennis clubs. I am also interested in reading, enjoy travel, and like to try coding for fun. 
-               </p>
-        </section>
+  <h1>Welcome to my Website</h1>
+  <p>Hi - My name is Jonathan Bradley and I work as a chemical engineer for Goodwin International, responsible for the sizing and specification of check valves and axial control valves.
+    I come from Sherburn-in-Elmet, which is a village in Yorkshire near Leeds, but today I live in the city of Stoke-on-Trent in Staffordshire
     
-        <hr>
+    I have played tennis for many years and currently play in the local leagues for Florence and Stone tennis clubs. I am also interested in reading, enjoy travel, and like to try coding for fun.
+  </p>
 
-        <section id="calculation">
-            <br>
-            <h1>Simple Calculation</h1><br>
-            <input type="number" id="input1" placeholder="Enter first number"> <br><br>
-            <input type="number" id="input2" placeholder="Enter second number"> <br><br>
-            <button id="calculator" onclick="calculateResult()">Calculate</button><br>
-            <br><p id="result"></p>
-            <br><br>
-        </section>
+  <h2>Holiday Photos</h2>
+  <div class="slideshow-container">
+    <div class="slides">
+        <img src="crete1.jpg" alt="Image 1">
+    </div>
+    <div class="slides">
+        <img src="crete2.jpg" alt="Image 2">
+    </div>
+    <div class="slides">
+        <img src="crete3.jpg" alt="Image 3">
+    </div>
+    <div class="slides">
+        <img src="crete4.jpg" alt="Image 4">
+    </div>
+    <div class="slides">
+        <img src="crete5.jpg" alt="Image 5">
+    </div>
 
-        <script>
-            function calculateResult() {
-                var input1 = document.getElementById("input1").value;
-                var input2 = document.getElementById("input2").value;
-                var result = parseFloat(input1) + parseFloat(input2);
-                document.getElementById("result").textContent = "The result is: " + result;
-            }
-        </script>
-    
-        <hr>
-    
-        <section id="books">
-            <h1>Writings</h1><br>
-            <a class="article" href="https://webfoundation.org/2019/03/web-birthday-30" target="_blank">30 years on, what’s next ForTheWeb?</a>
-            <br>
-            <a class="article" href="https://interestingengineering.com/how-did-tim-berners-lee-change-the-world-with-the-world-wide-web" target="_blank">How Did Tim Berners-Lee Change the World With the World Wide Web?</a>
-        </section>
-    
-        <hr>
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+  
+    <section id="calculation">
+      <br>
+      <h1>Simple Calculation - Add two numbers!</h1><br>
+      <input type="number" id="input1" placeholder="Enter first number"> <br><br>
+      <input type="number" id="input2" placeholder="Enter second number"> <br><br>
+      <button id="calculator" onclick="calculateResult()">Calculate</button><br>
+      <br><p id="result"></p>
+      <br><br>
+  </section>
 
-        <section id="travel">
-            <h1>Places I've Visited</h1>
-        </section>
-        <br><br>
-        <hr>
-    
-        <section id="contact">
-            <h1>Contact Details</h1><br><br>
-               <a href="mailto:my@gmail.com?Subject=Hi">
-                   <h5><i class="fa fa-envelope"></i>&nbsp;&nbsp;mygmailid@gmail.com</h5>
-                </a> 
-        </section>
-
-    </body>
-
+  <script src="./app.js"></script>
+</body>
 </html>
-
